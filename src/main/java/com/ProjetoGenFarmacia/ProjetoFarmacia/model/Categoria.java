@@ -34,7 +34,7 @@ public class Categoria {
 	
 	@ManyToMany(mappedBy = "categoria", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categoria")
-	private List<Prduto> produtos = new ArrayList<>();
+	private List<Produto> produtos = new ArrayList<>();
 
 
 	public long getId() {
@@ -67,16 +67,13 @@ public class Categoria {
 	}
 
 
-	public List<Prduto> getProdutos() {
+	public List<Produto> getProdutos() {
 		return produtos;
 	}
 
 
-	public void setProdutos(List<Prduto> produtos) {
+	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
 	}
 	
-	
-	
-
 }
