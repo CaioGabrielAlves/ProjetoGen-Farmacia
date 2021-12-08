@@ -4,13 +4,12 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CategoriaRepository extends JpaRepository<Categoria, long> {
+import com.ProjetoGenFarmacia.ProjetoFarmacia.model.Categoria;
 
+public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
 
-	public List<Categoria>findByDescricaoContainingIgnoreCaser (String descricao); 
-	
-	public Categoria findById(long id); 
+	public List<Categoria> findByDescricaoContainingIgnoreCase(String descricao);
 
-	
-}
+	public Categoria findById(long id);
+
 }
