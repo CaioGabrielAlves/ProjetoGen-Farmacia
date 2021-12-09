@@ -2,6 +2,7 @@ package com.ProjetoGenFarmacia.ProjetoFarmacia.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +20,8 @@ import com.ProjetoGenFarmacia.ProjetoFarmacia.repository.ProdutoRepository;
 @RequestMapping("/produto")
 @CrossOrigin("*")
 public class ProdutoController {
-
+	
+	@Autowired
 	private ProdutoRepository repository;
 
 	@GetMapping("/all")
